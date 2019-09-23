@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node
+  - docker build -t wunggary/node .
+  - docker images wunggary/node
 
 before deploy:
   - docker login -u wunggary -p peiyauwe5250
 
 deploy:
   provider: script
-  script: docker push mannydesigns/node
+  script: docker push wunggary/node
   on:
     branch: master
