@@ -6,7 +6,7 @@ script:
   - docker build -t wunggary/node .
   - docker images wunggary/node
 
-before deploy:
+before_deploy:
   - docker login -u wunggary -p peiyauwe5250
 
 deploy:
